@@ -1,0 +1,48 @@
+
+.icone{
+  display: flex;
+  flex-direction: column; 
+}
+
+.image{
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.titulo{
+  text-align: center;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 10px 0 10px 0;
+
+  .button{
+    margin: 10px 0 0 0;
+    padding: 12px;
+    border-radius: 50px;
+    background-color: skyblue;
+    color: white;
+  }
+}
+.button:hover{
+  background-color: rgb(29, 43, 49);
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  gap: 3px;
+}
+
+

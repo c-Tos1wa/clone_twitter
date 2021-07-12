@@ -30,10 +30,7 @@
     color: white;
   }
 }
-.button:hover{
-  background-color: rgb(29, 43, 49);
-  color: white;
-}
+
 
 .footer {
   display: flex;
@@ -41,7 +38,6 @@
   align-items: center;
   font-size: 18px;
   margin-top: 20px;
-  cursor: pointer;
   gap: 3px;
 }
 

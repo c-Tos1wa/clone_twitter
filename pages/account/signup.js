@@ -1,63 +1,65 @@
 import LogoIcon from '../../components/logoicon'
+import Month from '../../components/month'
+import Day from '../../components/day'
+import Year from '../../components/year'
+import { Container, Button, Grid } from '@material-ui/core'
+import { TextField, Typography } from '@material-ui/core'
+import styles from '../../styles/signup.module.scss'
 
-
-export default function SignUp(){
-  return(
+export default function SignUp() {
+  return (
     <>
       <div>
-        <LogoIcon />
-        <h3>Criar sua conta</h3>
-        <form action="" method="post">
-          <input 
-            type="text"
-            placeholder="Nome"
-          />
-          <input 
-            type="text"
-            placeholder="Celular"
-          />
-        </form>
-        <h4>Data de nascimento</h4>
-        <h4>
-          Isso não será exibido publicamente. Confirme sua própria idade, 
-          mesmo se esta conta for de empresa, de um animal de estimação ou outros.
-        </h4>
-        <div>
-          <label for="month">Mês</label>
-          <select id="month" name="month">
-            <option></option>
-            <option>Janeiro</option>
-            <option>Fevereiro</option>
-            <option>Março</option>
-            <option>Abril</option>
-            <option>Maio</option>
-            <option>Junho</option>
-            <option>Julho</option>
-            <option>Agosto</option>
-            <option>Setembro</option>
-            <option>Outubro</option>
-            <option>Novembro</option>
-            <option>Dezembro</option>
-          </select>
-          <label for="day">Dia</label>
-          <select id="day" name="day">
-            <option></option>
-            <option>1</option>
-            <option>15</option>
-            <option>22</option>
-            <option>31</option>
-          </select>
-          <label for="year">Ano</label>
-          <select id="year" name="year">
-            <option></option>
-            <option>1990</option>
-            <option>2000</option>
-            <option>2010</option>
-            <option>2021</option>
-          </select>
+        <div className={styles.logo}>
+          <LogoIcon />
         </div>
-        <button type="submit">Avançar</button>
+        <Container maxwidth='xs'>
+          <Typography className={styles.title} variant='h5'>
+            <strong>Criar sua conta</strong>
+          </Typography>
 
+          <form className={styles.dados}>
+            <TextField
+              variant={'outlined'}
+              margin='normal'
+              fullWidth
+              type='text'
+              label='Nome'
+              placeholder='Nome' />
+
+            <TextField
+              variant={'outlined'}
+              margin='normal'
+              fullWidth
+              type='text'
+              label='Celular'
+              placeholder='celular' />
+
+            <div className={styles.data}>
+              <Typography>
+                <strong>Data de nascimento</strong>
+              </Typography>
+              <Typography>
+                Isso não será exibido publicamente. Confirme sua própria idade,
+                mesmo se esta conta for de empresa, de um animal de estimação ou outros.
+              </Typography>
+              <div className={styles.calendario}>
+                <Month />
+                <Day />
+                <Year />
+              </div>
+            </div>
+
+            <Button className={styles.button}
+              type='submit'
+              fullWidth
+              variant='contained'
+            >
+              <strong>Avançar</strong>
+            </Button>
+          </form>
+
+        </Container>
       </div>
     </>
   )
